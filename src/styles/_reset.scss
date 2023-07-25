@@ -69,7 +69,7 @@ td {
   background: transparent;
 }
 body {
-  line-height: 1;
+  line-height: inherit;
   color: #000;
 }
 ol,
@@ -84,7 +84,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 :focus {
@@ -105,7 +105,7 @@ a {
 }
 
 .clearfix:after {
-  content: ".";
+  content: '.';
   display: block;
   clear: both;
   visibility: hidden;

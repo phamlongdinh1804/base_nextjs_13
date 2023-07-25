@@ -8,15 +8,20 @@ import type { TypedUseSelectorHook } from 'react-redux'
 export const useAppDispatch: () => AppDispatch = useDispatch
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 
-export default function HomePage({ res }: any) {
+export default function Redux({ res }: any) {
+  const username = useAppSelector((state) => state.authUser.username)
+  const handleClickButton = () => {
+    store.dispatch(updateUsername('test_user'))
+  }
   return (
     <>
-      <div className="flex justify-center items-center h-full">
-        <div className="font-medium text-[3rem]">Next.js 13 BASE: Pages Router With Tailwindcss, Antd, Redux</div>
+      <div>username: {username}</div>
+      <div className="flex justify-center items-center">
+        <button onClick={() => handleClickButton()}>Update Name</button>
       </div>
     </>
   )
 }
-HomePage.getLayout = function getLayout(page: React.ReactElement) {
+Redux.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout>{page}</Layout>
 }

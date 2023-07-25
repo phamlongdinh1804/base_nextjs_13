@@ -12,7 +12,7 @@ const Layout = (props: Props) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
       </Head>
-      <div className="mx-auto flex flex-col h-[calc(100%-1px)]">
+      <div className="mx-auto flex flex-col h-full">
         <Header />
         <main className="flex-1">{props.children}</main>
         <Footer />
