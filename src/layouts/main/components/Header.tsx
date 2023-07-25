@@ -46,8 +46,13 @@ const HeaderComponent = () => {
                 </a>
               </li>
               <li>
-                <Link href="/demo-redux" className="block text-white rounded bg-primary-700 p-0 hover:text-[#EF4230]">
+                <Link href="/base/redux" className="block text-white rounded bg-primary-700 p-0 hover:text-[#EF4230]">
                   Redux
+                </Link>
+              </li>
+              <li>
+                <Link href="/base/loading" className="block text-white rounded bg-primary-700 p-0 hover:text-[#EF4230]">
+                  Loading
                 </Link>
               </li>
             </ul>
