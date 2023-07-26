@@ -15,7 +15,7 @@ const HeaderComponent = () => {
           {/* LEFT */}
           <div>
             <Link href="/" className="flex items-center">
-              <span className="self-center text-xl font-semibold whitespace-nowrap text-[2rem]">NEXTJS BASE</span>
+              <span className="self-center font-semibold whitespace-nowrap text-[2rem]">NEXTJS BASE</span>
             </Link>
           </div>
           {/* CENTER */}
@@ -41,9 +41,9 @@ const HeaderComponent = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="block text-white rounded bg-primary-700 p-0 hover:text-[#EF4230]">
-                  Team
-                </a>
+                <Link href="/base/about" className="block text-white rounded bg-primary-700 p-0 hover:text-[#EF4230]">
+                  About
+                </Link>
               </li>
               <li>
                 <Link href="/base/redux" className="block text-white rounded bg-primary-700 p-0 hover:text-[#EF4230]">
