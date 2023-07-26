@@ -3,11 +3,14 @@ import { TypedUseSelectorHook, useSelector } from 'react-redux'
 import { RootState } from '@/store'
 import Link from 'next/link'
 import { Button } from 'antd'
+import { signOut, useSession } from 'next-auth/react'
 
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 
 const HeaderComponent = () => {
   const username = useAppSelector((state) => state.authUser.username)
+  const { data: session, status } = useSession()
+  const isLogin = !!session
   return (
     <header>
       <nav className="bg-[#12202F] text-white border-[#12202F] h-[7rem] flex items-center px-[7rem]">
@@ -58,17 +61,28 @@ const HeaderComponent = () => {
             </ul>
           </div>
           {/* RIGHT */}
-          <div className="flex items-center">
-            <Link href="#" className="mr-[1rem]">
-              <Button type="primary" shape="round">
-                SignUp
-              </Button>
-            </Link>
-            <Link href="#">
-              <Button type="primary" shape="round">
-                SignIn
-              </Button>
-            </Link>
+          <div>
+            {!isLogin && status !== 'loading' ? (
+              <div className="flex items-center">
+                <Link href="#" className="mr-[1rem]">
+                  <Button type="primary" shape="round">
+                    SignUp
+                  </Button>
+                </Link>
+                <Link href="/base/auth/signin">
+                  <Button type="primary" shape="round">
+                    SignIn
+                  </Button>
+                </Link>
+              </div>
+            ) : (
+              <div className="flex items-center">
+                <div className="mr-4">{session?.user?.email}</div>
+                <Button type="primary" shape="round" onClick={() => signOut()}>
+                  Sign Out
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </nav>

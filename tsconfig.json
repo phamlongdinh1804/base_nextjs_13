@@ -16,7 +16,9 @@
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"],
-      "next/app": ["./node_modules/next/app"]
+      "@assets/*": ["public/assets/*"],
+      "next/app": ["./node_modules/next/app"],
+      "react": [ "./node_modules/@types/react" ]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
