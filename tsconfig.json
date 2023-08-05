@@ -16,7 +16,7 @@
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@assets/*": ["public/assets/*"],
+      "@assets/*": ["./public/assets/*"],
       "next/app": ["./node_modules/next/app"],
       "react": [ "./node_modules/@types/react" ]
     }

@@ -15,6 +15,7 @@ export default function BaseAbout() {
         <p>React Hook Form</p>
         <p>Yup</p>
         <p>Multi Language i18n</p>
+        <p>NextImage</p>
       </div>
     </>
   )

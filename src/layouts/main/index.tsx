@@ -9,12 +9,12 @@ const Layout = (props: Props) => {
   return (
     <>
       <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no' />
       </Head>
-      <div className="mx-auto flex flex-col h-full bg-[#EDE7D7]">
+      <div className='mx-auto flex h-auto min-h-full flex-col bg-[#EDE7D7]'>
         <Header />
-        <main className="flex-1">{props.children}</main>
+        <main className='flex flex-1 px-[7rem] xl:px-[5rem]'>{props.children}</main>
         <Footer />
       </div>
     </>

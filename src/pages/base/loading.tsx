@@ -26,18 +26,20 @@ export default function LoadingPage() {
   }
   return (
     <>
-      <div className="p-12">
-        <Button type="primary" shape="round" onClick={() => handleLoading()}>
-          Loading
-        </Button>
-        <Button type="primary" shape="round" onClick={() => handleLoadingFullScreen()}>
-          Loading fullscreen
-        </Button>
-        <Spin spinning={loadingFullScreen} wrapperClassName="loading-fullscreen">
+      <div className='flex flex-1 flex-col py-8'>
+        <div>
+          <Button type='primary' shape='round' onClick={() => handleLoading()}>
+            Loading
+          </Button>
+          <Button type='primary' shape='round' onClick={() => handleLoadingFullScreen()}>
+            Loading fullscreen
+          </Button>
+        </div>
+        <Spin spinning={loadingFullScreen} wrapperClassName='loading-fullscreen'>
           <div></div>
         </Spin>
         <Spin spinning={loading}>
-          <div className="mt-12">
+          <div className='mt-12'>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum soluta nostrum tempora ab ipsa quas maxime
               iusto quis! Dicta velit quo voluptatum expedita? Minus nulla, placeat fuga natus facere dolorum?
@@ -52,9 +54,11 @@ export default function LoadingPage() {
             </p>
           </div>
         </Spin>
-        <Button type="primary" loading={loadingButton} onClick={() => handleButtonLoading()}>
-          Button Loading
-        </Button>
+        <div>
+          <Button type='primary' loading={loadingButton} onClick={() => handleButtonLoading()}>
+            Button Loading
+          </Button>
+        </div>
       </div>
     </>
   )

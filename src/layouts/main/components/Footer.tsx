@@ -1,10 +1,10 @@
 const Footer = () => {
   return (
-    <footer className="bg-[#12202F] text-white border-[#12202F] min-h-[7rem] h-[7rem] px-[7rem] flex justify-between items-center">
+    <footer className='flex h-[7rem] min-h-[7rem] items-center justify-between border-[#12202F] bg-[#12202F] px-[7rem] text-white'>
       {/* LEFT */}
       <div>V1.0.0</div>
       {/* RIGHT */}
-      <div>© Copyright WebTeam. All Rights Reserved.</div>
+      <div>© Copyright WebTeam.</div>
     </footer>
   )
 }

@@ -1,0 +1,41 @@
+{
+  "overrides": [
+    {
+      "files": "*.{js,vue,tsx,ts}",
+      "options": {
+        "arrowParens": "avoid",
+        "bracketSpacing": true,
+        "htmlWhitespaceSensitivity": "ignore",
+        "insertPragma": false,
+        "jsxBracketSameLine": false,
+        "jsxSingleQuote": true,
+        "printWidth": 120,
+        "proseWrap": "always",
+        "quoteProps": "as-needed",
+        "requirePragma": false,
+        "semi": false,
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "es5",
+        "useTabs": false,
+        "vueIndentScriptAndStyle": false,
+        "plugins": ["prettier-plugin-tailwindcss"],
+        "pluginSearchDirs": false,
+        "overrides": [
+          { "files": "*.svelte", "options": { "parser": "svelte" } }
+        ]
+      }
+    },
+    {
+      "files": "*.php",
+      "options": {
+        "printWidth": 160,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": false,
+        "singleQuote": true,
+        "trailingCommaPHP": true
+      }
+    }
+  ]
+}
