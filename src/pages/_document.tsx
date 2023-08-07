@@ -2,7 +2,7 @@ import { StyleProvider, createCache, extractStyle } from '@ant-design/cssinjs'
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 
 const MyDocument = () => (
-  <Html lang="en">
+  <Html lang='vi'>
     <Head />
     <body>
       <Main />
@@ -16,12 +16,11 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
   const originalRenderPage = ctx.renderPage
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App) => (props) =>
-        (
-          <StyleProvider cache={cache}>
-            <App {...props} />
-          </StyleProvider>
-        ),
+      enhanceApp: App => props => (
+        <StyleProvider cache={cache}>
+          <App {...props} />
+        </StyleProvider>
+      ),
     })
 
   const initialProps = await Document.getInitialProps(ctx)
