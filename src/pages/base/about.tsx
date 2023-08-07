@@ -3,7 +3,7 @@ import Layout from '@/layouts/main'
 export default function BaseAbout() {
   return (
     <>
-      <div className="p-12">
+      <div className='p-12'>
         <p>Pages Router</p>
         <p>Tailwindcss</p>
         <p>Antd</p>
@@ -11,11 +11,9 @@ export default function BaseAbout() {
         <p>Middleware</p>
         <p>Axios</p>
         <p>NextAuth</p>
-        {/* <p>GraphQL</p> */}
         <p>React Hook Form</p>
         <p>Yup</p>
         <p>Multi Language i18n</p>
-        <p>NextImage</p>
       </div>
     </>
   )
